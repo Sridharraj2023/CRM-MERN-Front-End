@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+## CRM Application (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Overview
+This CRM application helps manage customer profiles with features such as login/registration, CRUD operations for customer data, role-based access, and analytics. The stack is built using the MERN (MongoDB, Express.js, React.js, Node.js) framework.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### Frontend (React.js + Bootstrap)
 
-### `npm start`
+#### Technologies
+- **React.js**: Component-based UI framework.
+- **Bootstrap**: For responsive design.
+- **React Router**: For client-side routing.
+- **Axios**: For making HTTP requests to the backend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Folder Structure
+- **`client/src/`**: Contains all React components and configuration files.
+- **`components/`**: Reusable components like forms, buttons, customer cards, etc.
+- **`pages/`**: Pages like login, dashboard, customer profile management, etc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Steps to Run Frontend
 
-### `npm test`
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Sridharraj2023/CRM_MERN.git
+   cd CRM_MERN/client
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Run Frontend**:
+   - Make sure the backend server is running on port `5000`.
+   - Start the React frontend using:
+     ```bash
+     npm start
+     ```
+   - The frontend will now be running on `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Environment Variables (Optional)**:
+   You can create a `.env` file for any environment-specific variables. By default, it will interact with the backend on `http://localhost:5000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Features:
+- **User Registration & Login**: Allow users to sign up and log in securely.
+- **Dashboard**: Displays customer profiles and allows for managing customer details.
+- **CRUD Operations**: Users can create, view, edit, and delete customer data.
+- **Role-based Access Control**: Limits certain features based on the user's role.
+- **Bootstrap Integration**: Ensures the app is fully responsive for all devices.
+  
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend (Node.js + Express.js + MongoDB)
 
-### `npm run eject`
+#### Technologies
+- **Node.js**: JavaScript runtime for the backend server.
+- **Express.js**: Framework to handle HTTP requests and routing.
+- **MongoDB**: NoSQL database for storing customer data.
+- **JWT (JSON Web Tokens)**: For secure authentication and session management.
+- **bcrypt**: For hashing passwords.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Folder Structure
+- **`server/`**: Contains all backend files, including routes, models, and controllers.
+- **`routes/`**: API endpoints for user authentication and customer management.
+- **`models/`**: Mongoose models for users and customers.
+- **`controllers/`**: Contains logic for handling user and customer requests.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Steps to Run Backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Sridharraj2023/CRM_MERN.git
+   cd CRM_MERN/server
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Create `.env` File**:
+   - In the `server/` directory, create a `.env` file and add the following:
+     ```
+     MONGO_URI=your_mongodb_connection_string
+     JWT_SECRET=your_jwt_secret_key
+     ```
+   - **MONGO_URI**: Replace with your MongoDB connection string.
+   - **JWT_SECRET**: Replace with a secure random string.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Run Backend**:
+   Start the backend server using:
+   ```bash
+   npm run dev
+   ```
+   The backend will now be running on `http://localhost:5000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Features:
+- **User Authentication**: Secure login and registration with JWT for session management.
+- **Password Hashing**: Passwords are securely stored using `bcrypt`.
+- **Customer Management**: Provides full CRUD functionality for customer profiles.
+- **Error Handling**: Proper error handling for all API requests.
+- **API Endpoints**:
+  - `/api/auth/register`: For user registration.
+  - `/api/auth/login`: For user login.
+  - `/api/customers`: For customer profile management (CRUD operations).
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Full Application Setup
 
-### Analyzing the Bundle Size
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Sridharraj2023/CRM_MERN.git
+   cd CRM_MERN
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Backend Setup**:
+   - Navigate to `server` and follow the backend instructions to install dependencies, set up the `.env` file, and run the backend.
 
-### Making a Progressive Web App
+3. **Frontend Setup**:
+   - Navigate to `client` and install the dependencies. Start the frontend as explained in the frontend setup section.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. **Start Both Servers**:
+   - Backend: Run `npm run dev` in `server`.
+   - Frontend: Run `npm start` in `client`.
 
-### Advanced Configuration
+5. **Access the Application**:
+   - Open the frontend in your browser: `http://localhost:3000`.
+   - The backend API will be available at `http://localhost:5000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### Contributing
+To contribute to this project:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit (`git commit -m 'Add some feature'`).
+4. Push the branch (`git push origin feature/YourFeature`).
+5. Create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### License
+This project is licensed under the MIT License.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let me know if you'd like further customization or clarification!
