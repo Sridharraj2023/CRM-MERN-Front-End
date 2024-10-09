@@ -22,8 +22,8 @@ This CRM application helps manage customer profiles with features such as login/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Sridharraj2023/CRM_MERN.git
-   cd CRM_MERN/client
+   git clone https://github.com/Sridharraj2023/CRM-MERN-Front-End.git
+   cd CRM-MERN-Front-End
    ```
 
 2. **Install Dependencies**:
@@ -32,7 +32,7 @@ This CRM application helps manage customer profiles with features such as login/
    ```
 
 3. **Run Frontend**:
-   - Make sure the backend server is running on port `5000`.
+   - Make sure the backend server is running on port `3000`.
    - Start the React frontend using:
      ```bash
      npm start
@@ -40,7 +40,7 @@ This CRM application helps manage customer profiles with features such as login/
    - The frontend will now be running on `http://localhost:3000`.
 
 4. **Environment Variables (Optional)**:
-   You can create a `.env` file for any environment-specific variables. By default, it will interact with the backend on `http://localhost:5000`.
+   You can create a `.env` file for any environment-specific variables. By default, it will interact with the backend on `http://localhost:3000`.
 
 #### Features:
 - **User Registration & Login**: Allow users to sign up and log in securely.
@@ -70,8 +70,8 @@ This CRM application helps manage customer profiles with features such as login/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Sridharraj2023/CRM_MERN.git
-   cd CRM_MERN/server
+   git clone https://github.com/Sridharraj2023/CRM-MERN-Back-End.git
+   cd CRM-MERN-Back-End
    ```
 
 2. **Install Dependencies**:
@@ -84,6 +84,7 @@ This CRM application helps manage customer profiles with features such as login/
      ```
      MONGO_URI=your_mongodb_connection_string
      JWT_SECRET=your_jwt_secret_key
+     PORT=port_number
      ```
    - **MONGO_URI**: Replace with your MongoDB connection string.
    - **JWT_SECRET**: Replace with a secure random string.
@@ -93,7 +94,7 @@ This CRM application helps manage customer profiles with features such as login/
    ```bash
    npm run dev
    ```
-   The backend will now be running on `http://localhost:5000`.
+   The backend will now be running on `http://localhost:3000`.
 
 #### Features:
 - **User Authentication**: Secure login and registration with JWT for session management.
@@ -111,7 +112,8 @@ This CRM application helps manage customer profiles with features such as login/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Sridharraj2023/CRM_MERN.git
+   git clone https://github.com/Sridharraj2023/CRM-MERN-Front-End.git
+   git clone https://github.com/Sridharraj2023/CRM-MERN-Back-End.git
    cd CRM_MERN
    ```
 
@@ -127,7 +129,7 @@ This CRM application helps manage customer profiles with features such as login/
 
 5. **Access the Application**:
    - Open the frontend in your browser: `http://localhost:3000`.
-   - The backend API will be available at `http://localhost:5000`.
+   - The backend API will be available at `http://localhost:3000`.
 
 ---
 
@@ -143,4 +145,3 @@ To contribute to this project:
 This project is licensed under the MIT License.
 
 ---
-
