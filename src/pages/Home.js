@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-      <h3>CRM Home</h3>    
+      <h3>Welcome to our, CRM Web Application!</h3>    
     </>
   )
 }

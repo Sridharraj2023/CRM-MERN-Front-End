@@ -18,7 +18,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/customers');
+        const response = await axios.get('https://crm-mern-back-end.onrender.com/api/customers');
         setCustomers(response.data);
       } catch (error) {
         setError('Error fetching customers');
